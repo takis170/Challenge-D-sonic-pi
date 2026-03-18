@@ -1,9 +1,10 @@
+
 use_bpm 98
 
 
 
-#Drums measure 2
-9.times do
+#Drums measure 2 which is measure for each
+define :drums do
   sample :drum_cymbal_pedal,sustain: 1  #closed hi hat
   sample :drum_bass_hard,sustain: 1
   sleep 0.5
@@ -20,24 +21,39 @@ use_bpm 98
   sample :drum_bass_hard,sustain: 1
   sleep 0.5
 end
+define :electric_bass_3_3 do
+  use_synth :fm
+  with_fx :distortion, distort: 0.3 do
+    play :a3
+    sleep 1
+    play :e3
+    sleep 0.5
+    play :a3
+    sleep 1
+    play :e3
+  end
+end
 
-use_bpm 98
+live_loop :background do
+  drums
+end
+
+#measure_1_3/5
+6.times do
+  electric_bass_3_3
+  sleep 0.5
+end
+
+
 use_synth :fm
 with_fx :distortion, distort: 0.3 do
-  play :a3
+  sleep 0.25
+  play :c3, release: 2
   sleep 1
-  play :e3
+  play :g3
   sleep 0.5
-  play :a3
+  play :E
   sleep 1
-  play :e3
-  sleep 0.5
-  play :a3
-  sleep 1
-  play :e3
-  sleep 0.5
-  play :a3
-  sleep 1
-  play :e3
+  play :G3
 end
 
