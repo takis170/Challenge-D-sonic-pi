@@ -21,5 +21,23 @@ use_bpm 98
   sleep 0.5
 end
 
+use_bpm 98
 use_synth :fm
-play :a3
+with_fx :distortion, distort: 0.3 do
+  play :a3
+  sleep 1
+  play :e3
+  sleep 0.5
+  play :a3
+  sleep 1
+  play :e3
+  sleep 0.5
+  play :a3
+  sleep 1
+  play :e3
+  sleep 0.5
+  play :a3
+  sleep 1
+  play :e3
+end
+
