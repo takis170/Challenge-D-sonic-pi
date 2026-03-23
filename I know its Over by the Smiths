@@ -1,4 +1,5 @@
 
+
 use_bpm 98
 
 
@@ -31,29 +32,61 @@ define :electric_bass_3_3 do
     play :a3
     sleep 1
     play :e3
+    sleep 0.5
   end
+end
+
+define :electric_measure_3_half do
+  use_synth :fm
+  with_fx :distortion, distort: 0.3 do
+    sleep 0.5
+    play :c3, release: 2
+    sleep 1
+    play :g3
+    sleep 0.5
+    play :E
+    sleep 1
+    play :G3
+  end
+end
+#the 5 0 notes that happened measure 4 to 5
+define :guitar_note do |note|
+  play note,
+    attack: 0.01,
+    sustain: 0.3,
+    release: 0.4,
+    amp: 1.2
 end
 
 live_loop :background do
   drums
 end
+define :electric_measure_5_half do
+  use_synth :fm
+  with_fx :distortion, distort: 0.3 do
+    sleep 0.5
+    play :ea, release: 2
+    sleep 1
+    play :EG
+    sleep 0.5
+    play :Es3
+    sleep 1
+    play :G3
+  end
+end
+
 
 #measure_1_3/5
 6.times do
   electric_bass_3_3
+end
+
+electric_measure_3_half
+4.times do
+  guitar_note :ef
+  sleep 1
+  guitar_note :es2
   sleep 0.5
 end
 
-
-use_synth :fm
-with_fx :distortion, distort: 0.3 do
-  sleep 0.25
-  play :c3, release: 2
-  sleep 1
-  play :g3
-  sleep 0.5
-  play :E
-  sleep 1
-  play :G3
-end
 
