@@ -1,13 +1,15 @@
+use_bpm 176
 #mission impossible
 
 use_synth :piano
 #measure 1
-play :G2
-sleep 0.5
-play :G2
-sleep 0.5
-play :Bb2
-sleep 0.5
-play :D3
-sleep 0.5
+play :E
+sleep 1.5
+play :E
+play :E
+sleep 1.5
+play :G
+sleep 1
+play :A
+sleep 1
 #measure 2
