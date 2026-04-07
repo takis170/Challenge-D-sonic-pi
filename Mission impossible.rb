@@ -1,6 +1,6 @@
 use_bpm 176
 #mission impossible
-
+bass = "C:\Users\george_turner\Desktop\Lalo Schifrin - Mission Impossible-new.wav"
 
 define :Piano_melody do |x, y|
   use_synth :piano
