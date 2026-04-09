@@ -1,7 +1,11 @@
-use_bpm 176
-#mission impossible
-bass = "C:\Users\george_turner\Desktop\Lalo Schifrin - Mission Impossible-new.wav"
+use_bpm 170
+Piccolo = "C:/Users/george_turner/Desktop/Piccolo.wav"
 
+sample Piccolo
+sleep 12
+
+#mission impossible
+# Mission: Impossible Piccolo Riff
 define :Piano_melody do |x, y|
   use_synth :piano
   #measure 1
