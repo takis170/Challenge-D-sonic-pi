@@ -1,25 +1,21 @@
 use_bpm 170
 Piccolo = "C:/Users/george_turner/Desktop/Piccolo.wav"
+Guitar = "C:/Users/george_turner/Desktop/GuitarMission.wav"
 
 sample Piccolo
 sleep 12
-
+sample Guitar
 #mission impossible
 # Mission: Impossible Piccolo Riff
-define :Piano_melody do |x, y|
+
+#Main melody
+use_bpm 170
+2.times do
   use_synth :piano
-  #measure 1
-  play :E
-  sleep 1.5
-  play :E
-  play :E
-  sleep 1.5
-  play x
-  sleep 1
-  play y
-  sleep 1
-end
-14.times do
-  Piano_melody :G, :A
-  Piano_melody :D, :Ds
+  play :B
+  sleep 0.5
+  play :G
+  sleep 0.5
+  play :D, sustain: 1
+  sleep 5
 end
