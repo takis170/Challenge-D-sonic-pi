@@ -18,26 +18,26 @@ end
 
 live_loop :testing do
   use_synth :piano
-  p :B5
+  play :B5, sustain: 1
   sleep 0.5
-  p :G4
+  play :G4, sustain: 1 
   sleep 0.5
   play :D5, sustain: 10
   sleep 3.6
-  p :B5
+  play :B5
   sleep 0.5
-  p :G4
+  play :G4
   sleep 0.5
   play :Db5, sustain: 1
   sleep 3.6
-  p :B5
+  play :B5
   sleep 0.5
-  p :G4
+  play :G4
   sleep 0.5
-  p :C5, sustain: 1
+  play :C5, sustain: 1
   sleep 3.6
-  p :B4
+  play :B4
   sleep 0.5
-  p :C5
+  play :C5
   sleep 4
 end
