@@ -3,6 +3,34 @@ use_bpm 170
 Piccolo = "C:/Users/gturn/Desktop/2nd CS SONG/Piccolo.wav"
 
 Guitar = "C:/Users/gturn/Desktop/2nd CS SONG/bassMissionImpossible.wav"
+define :treble_clef do
+  use_synth :piano
+  #measure 5
+  play :B
+  sleep 0.5
+  play :G
+  sleep 0.5
+  play :C, sustain: 1
+  #measure 6
+  sleep 5
+  play :B
+  sleep 0.5
+  play :G
+  sleep 0.5
+  play :C, sustain: 1
+  #measure 7
+  sleep 5
+  play :B
+  sleep 0.5
+  play :G
+  sleep 0.5
+  play :C, sustain: 1
+  #measure 8
+  sleep 5
+  play :B
+  sleep 0.5
+  play :C
+end
 
 define :bass_clef do
   use_synth :piano
@@ -41,5 +69,13 @@ sample Piccolo, release: 0.5
 sleep 12
 sample Guitar
 sleep 18
-bass_clef
+
 #Main melody
+# Play them at the same time using threads
+in_thread do
+  bass_clef
+end
+
+in_thread do
+  treble_clef
+end
