@@ -1,10 +1,30 @@
-use_bpm 170
+use_bpm 172
 
 Piccolo = "C:/Users/gturn/Desktop/2nd CS SONG/Piccolo.wav"
 
 Guitar = "C:/Users/gturn/Desktop/2nd CS SONG/bassMissionImpossible.wav"
+
 define :treble_clef do
   use_synth :piano
+  use_bpm 172
+use_synth :piano
+play :G3
+sleep 1.5
+play :G3,sustain: 1
+sleep 1.5
+play :B3
+sleep 1
+play :C4,sustain: 1
+sleep 1.5
+#measure 2
+play :G3
+sleep 1.5
+play :G3,sustain: 1
+sleep 1.5
+play :B3
+sleep 1
+play :f3,sustain: 1
+#SAME NOTES 
   #measure 5
   play :B
   sleep 0.5
